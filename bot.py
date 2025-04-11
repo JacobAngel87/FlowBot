@@ -304,6 +304,9 @@ async def flow(interaction:discord.Interaction, lines: int = 1):
     
     if (lines < 0):
         return
+    
+    if (lines > 100):
+        lines = 100
 
     theFlows = GetFlow(lines)
     
